@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ecom Intelligence</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">E</div>
+
+            <div>
+                <h2>Ecom</h2>
+                <span>Intelligence</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">MAIN</p>
+
+            <a href="index.html" class="nav-link active">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="pages/analytics.html" class="nav-link">
+                <span>◈</span>
+                Analytics
+            </a>
+
+            <a href="pages/customers.html" class="nav-link">
+                <span>◉</span>
+                Customers
+            </a>
+
+            <a href="pages/products.html" class="nav-link">
+                <span>□</span>
+                Products
+            </a>
+
+            <p class="nav-title">INTELLIGENCE</p>
+
+            <a href="pages/predictions.html" class="nav-link">
+                <span>✦</span>
+                Predictions
+
+            </a>
+
+            <a href="pages/reports.html" class="nav-link">
+                <span>▤</span>
+                Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Explore your business data.</p>
+                </div>
+            </div>
+
+            <button class="logout-btn">
+                <span>↪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <div class="page-heading">
+                <h1>Dashboard</h1>
+                <p>Welcome back! Here's what's happening with your store.</p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Admin User</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <span class="profile-arrow">⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="dashboard-container">
+
+
+            <!-- DATE / ACTION BAR -->
+
+            <div class="dashboard-toolbar">
+
+                <div>
+                    <span class="live-status">
+                        <span></span>
+                        Live data
+                    </span>
+                </div>
+
+                <div class="toolbar-actions">
+
+                    <select id="dateFilter">
+                        <option value="7">Last 7 days</option>
+                        <option value="30" selected>Last 30 days</option>
+                        <option value="90">Last 90 days</option>
+                        <option value="365">This year</option>
+                    </select>
+
+                    <button class="primary-btn" id="exportBtn">
+                        ↓ Export
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= KPI CARDS ================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- REVENUE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div>
+                            <p>Total Revenue</p>
+                            <h2 id="totalRevenue">Loading...</h2>
+                        </div>
+
+                        <div class="stat-icon revenue-icon">
+                            ₹
+                        </div>
+                    </div>
+
+                    <div class="stat-bottom">
+                        <span class="positive">↑ 18.4%</span>
+                        <span>vs last month</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ORDERS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div>
+                            <p>Total Orders</p>
+                            <h2 id="totalOrders">Loading...</h2>
+                        </div>
+
+                        <div class="stat-icon orders-icon">
+                            🛒
+                        </div>
+
+                    </div>
+
+                    <div class="stat-bottom">
+                        <span class="positive">↑ 12.7%</span>
+                        <span>vs last month</span>
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOMERS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div>
+                            <p>Total Customers</p>
+                            <h2 id="totalCustomers">Loading...</h2>
+                        </div>
+
+                        <div class="stat-icon customers-icon">
+                            👥
+                        </div>
+
+                    </div>
+
+                    <div class="stat-bottom">
+                        <span class="positive">↑ 8.2%</span>
+                        <span>vs last month</span>
+                    </div>
+
+                </div>
+
+
+                <!-- CONVERSION -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div>
+                            <p>Average Order Value</p>
+                            <h2 id="averageOrderValue">Loading...</h2>
+                        </div>
+
+                        <div class="stat-icon conversion-icon">
+                            %
+                        </div>
+
+                    </div>
+
+                    <div class="stat-bottom">
+                        <span class="positive">↑ 1.6%</span>
+                        <span>vs last month</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CHART + INSIGHTS ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- REVENUE CHART -->
+
+                <div class="dashboard-card revenue-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Revenue Overview</h3>
+                            <p>Track your revenue performance</p>
+                        </div>
+
+                        <button class="more-btn">
+                            ⋮
+                        </button>
+
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <!-- AI INSIGHTS -->
+
+                <div class="dashboard-card insights-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>AI Business Insights</h3>
+                            <p>Smart observations from your data</p>
+                        </div>
+
+                        <div class="ai-icon">
+                            ✦
+                        </div>
+
+                    </div>
+
+                    <div class="insight-list">
+
+                        <div class="insight-item">
+                            <span class="insight-bullet green"></span>
+
+                            <p>
+                                Revenue increased by
+                                <strong>18.4%</strong>
+                                this month.
+                            </p>
+                        </div>
+
+                        <div class="insight-item">
+                            <span class="insight-bullet blue"></span>
+
+                            <p>
+                                <strong>Smartphone X</strong>
+                                is currently your best-selling product.
+                            </p>
+                        </div>
+
+                        <div class="insight-item">
+                            <span class="insight-bullet yellow"></span>
+
+                            <p>
+                                <strong>218 customers</strong>
+                                are showing signs of churn risk.
+                            </p>
+                        </div>
+
+                        <div class="insight-item">
+                            <span class="insight-bullet purple"></span>
+
+                            <p>
+                                Weekend sales are
+                                <strong>27%</strong>
+                                higher than weekdays.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button class="view-insights-btn">
+                        View detailed insights →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LOWER SECTION ================= -->
+
+            <div class="dashboard-grid lower-grid">
+
+
+                <!-- TOP PRODUCTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Top Products</h3>
+                            <p>Best performing products</p>
+                        </div>
+
+                        <a href="pages/products.html" class="view-link">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-list">
+
+
+                        <div class="product-row">
+
+                            <div class="product-image">
+                                💻
+                            </div>
+
+                            <div class="product-details">
+
+                                <strong>Laptop Pro</strong>
+
+                                <span>
+                                    245 orders
+                                </span>
+
+                            </div>
+
+                            <div class="product-revenue">
+                                ₹24,500
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-row">
+
+                            <div class="product-image">
+                                📱
+                            </div>
+
+                            <div class="product-details">
+
+                                <strong>Smartphone X</strong>
+
+                                <span>
+                                    192 orders
+                                </span>
+
+                            </div>
+
+                            <div class="product-revenue">
+                                ₹19,200
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-row">
+
+                            <div class="product-image">
+                                🎧
+                            </div>
+
+                            <div class="product-details">
+
+                                <strong>Wireless Headphones</strong>
+
+                                <span>
+                                    168 orders
+                                </span>
+
+                            </div>
+
+                            <div class="product-revenue">
+                                ₹8,400
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-row">
+
+                            <div class="product-image">
+                                ⌚
+                            </div>
+
+                            <div class="product-details">
+
+                                <strong>Smart Watch</strong>
+
+                                <span>
+                                    143 orders
+                                </span>
+
+                            </div>
+
+                            <div class="product-revenue">
+                                ₹7,150
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOMER HEALTH -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Customer Health</h3>
+                            <p>Customer segmentation</p>
+                        </div>
+
+                        <a href="pages/customers.html" class="view-link">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="customer-health">
+
+
+                        <div class="health-row">
+
+                            <div class="health-label">
+                                <span class="health-dot loyal"></span>
+                                Loyal Customers
+                            </div>
+
+                            <strong>31%</strong>
+
+                        </div>
+
+                        <div class="health-bar">
+                            <span style="width: 31%"></span>
+                        </div>
+
+
+                        <div class="health-row">
+
+                            <div class="health-label">
+                                <span class="health-dot champions"></span>
+                                Champions
+                            </div>
+
+                            <strong>24%</strong>
+
+                        </div>
+
+                        <div class="health-bar">
+                            <span style="width: 24%"></span>
+                        </div>
+
+
+                        <div class="health-row">
+
+                            <div class="health-label">
+                                <span class="health-dot risk"></span>
+                                At Risk
+                            </div>
+
+                            <strong>18%</strong>
+
+                        </div>
+
+                        <div class="health-bar">
+                            <span style="width: 18%"></span>
+                        </div>
+
+
+                        <div class="health-row">
+
+                            <div class="health-label">
+                                <span class="health-dot churn"></span>
+                                Churn Risk
+                            </div>
+
+                            <strong>12%</strong>
+
+                        </div>
+
+                        <div class="health-bar">
+                            <span style="width: 12%"></span>
+                        </div>
+
+
+                        <div class="health-row">
+
+                            <div class="health-label">
+                                <span class="health-dot new"></span>
+                                New Customers
+                            </div>
+
+                            <strong>15%</strong>
+
+                        </div>
+
+                        <div class="health-bar">
+                            <span style="width: 15%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECENT ORDERS ================= -->
+
+            <div class="dashboard-card recent-orders">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Orders</h3>
+                        <p>Latest transactions from your store</p>
+                    </div>
+
+                    <a href="pages/analytics.html" class="view-link">
+                        View all →
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#ORD-10482</td>
+                                <td>Rahul Sharma</td>
+                                <td>Laptop Pro</td>
+                                <td>₹52,000</td>
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+                                <td>14 Aug 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-10481</td>
+                                <td>Priya Patel</td>
+                                <td>Smartphone X</td>
+                                <td>₹42,000</td>
+                                <td>
+                                    <span class="status processing">
+                                        Processing
+                                    </span>
+                                </td>
+                                <td>14 Aug 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-10480</td>
+                                <td>Amit Shah</td>
+                                <td>Wireless Headphones</td>
+                                <td>₹5,000</td>
+                                <td>
+                                    <span class="status shipped">
+                                        Shipped
+                                    </span>
+                                </td>
+                                <td>13 Aug 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-10479</td>
+                                <td>Neha Mehta</td>
+                                <td>Smart Watch</td>
+                                <td>₹7,500</td>
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+                                <td>13 Aug 2026</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
