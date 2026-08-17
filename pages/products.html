@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - Ecom Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            E
+        </div>
+
+        <div>
+
+            <h2>Ecom</h2>
+
+            <span>
+                Intelligence
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN
+        </p>
+
+
+        <a href="../index.html" class="nav-link">
+
+            <span>▦</span>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="analytics.html" class="nav-link">
+
+            <span>◈</span>
+
+            Analytics
+
+        </a>
+
+
+        <a href="customers.html" class="nav-link">
+
+            <span>◉</span>
+
+            Customers
+
+        </a>
+
+
+        <a href="products.html" class="nav-link active">
+
+            <span>□</span>
+
+            Products
+
+        </a>
+
+
+        <p class="nav-title">
+            INTELLIGENCE
+        </p>
+
+
+        <a href="predictions.html" class="nav-link">
+
+            <span>✦</span>
+
+            Predictions
+
+        </a>
+
+
+        <a href="reports.html" class="nav-link">
+
+            <span>▤</span>
+
+            Reports
+
+        </a>
+
+
+    </nav>
+
+
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+                ?
+            </div>
+
+            <div>
+
+                <strong>
+                    Need help?
+                </strong>
+
+                <p>
+                    Explore your business data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="logout-btn">
+
+            <span>
+                ↪
+            </span>
+
+            Logout
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+
+        <div class="page-heading">
+
+            <h1>
+                Product Intelligence
+            </h1>
+
+            <p>
+                Track product performance, sales and inventory.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+
+            <button class="icon-btn">
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="profile">
+
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong>
+                        Admin User
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+
+                <span class="profile-arrow">
+                    ⌄
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         PRODUCT CONTENT
+    ========================================== -->
+
+    <section class="dashboard-container">
+
+
+        <!-- TOOLBAR -->
+
+        <div class="dashboard-toolbar">
+
+
+            <div>
+
+                <span class="live-status">
+
+                    <span></span>
+
+                    Product data updated recently
+
+                </span>
+
+            </div>
+
+
+            <div class="toolbar-actions">
+
+                <button class="primary-btn">
+                    + Add Product
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             KPI CARDS
+        ========================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- TOTAL PRODUCTS -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Total Products
+                        </p>
+
+                        <h2>
+                            428
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon revenue-icon">
+                        □
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 6.8%
+                    </span>
+
+                    <span>
+                        this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BEST SELLERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Best Sellers
+                        </p>
+
+                        <h2>
+                            36
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon conversion-icon">
+                        ★
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 12.5%
+                    </span>
+
+                    <span>
+                        sales growth
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOW STOCK -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Low Stock
+                        </p>
+
+                        <h2>
+                            24
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon orders-icon">
+                        !
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="negative">
+                        ↑ 5.2%
+                    </span>
+
+                    <span>
+                        need attention
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT REVENUE -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Product Revenue
+                        </p>
+
+                        <h2>
+                            ₹68,420
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon customers-icon">
+                        ₹
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 15.8%
+                    </span>
+
+                    <span>
+                        vs last month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             CHARTS
+        ========================================== -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- PRODUCT PERFORMANCE -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Product Performance
+                        </h3>
+
+                        <p>
+                            Revenue generated by top products
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-chart-wrapper">
+
+                    <canvas id="productPerformanceChart"></canvas>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CATEGORY REVENUE -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Revenue by Category
+                        </h3>
+
+                        <p>
+                            Category contribution to revenue
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-chart-wrapper">
+
+                    <canvas id="productCategoryChart"></canvas>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             INVENTORY HEALTH
+        ========================================== -->
+
+        <div class="dashboard-card inventory-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Inventory Health
+                    </h3>
+
+                    <p>
+                        Current inventory status
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-grid">
+
+
+                <div class="inventory-item">
+
+                    <div class="inventory-top">
+
+                        <span>
+                            Healthy Stock
+                        </span>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                    </div>
+
+                    <div class="inventory-progress">
+
+                        <div
+                            class="inventory-progress-bar healthy"
+                            style="width:72%"
+                        ></div>
+
+                    </div>
+
+                    <small>
+                        308 products
+                    </small>
+
+                </div>
+
+
+
+                <div class="inventory-item">
+
+                    <div class="inventory-top">
+
+                        <span>
+                            Medium Stock
+                        </span>
+
+                        <strong>
+                            22%
+                        </strong>
+
+                    </div>
+
+                    <div class="inventory-progress">
+
+                        <div
+                            class="inventory-progress-bar medium"
+                            style="width:22%"
+                        ></div>
+
+                    </div>
+
+                    <small>
+                        96 products
+                    </small>
+
+                </div>
+
+
+
+                <div class="inventory-item">
+
+                    <div class="inventory-top">
+
+                        <span>
+                            Low Stock
+                        </span>
+
+                        <strong>
+                            6%
+                        </strong>
+
+                    </div>
+
+                    <div class="inventory-progress">
+
+                        <div
+                            class="inventory-progress-bar low"
+                            style="width:6%"
+                        ></div>
+
+                    </div>
+
+                    <small>
+                        24 products
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             PRODUCT TABLE
+        ========================================== -->
+
+        <div class="dashboard-card product-table-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <h3>
+                        Product Overview
+                    </h3>
+
+                    <p>
+                        Product-level performance intelligence
+                    </p>
+
+                </div>
+
+
+                <div class="product-filters">
+
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search product..."
+                    >
+
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="electronics">
+                            Electronics
+                        </option>
+
+                        <option value="fashion">
+                            Fashion
+                        </option>
+
+                        <option value="home">
+                            Home
+                        </option>
+
+                        <option value="beauty">
+                            Beauty
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="table-container">
+
+
+                <table id="productTable">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Product
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Units Sold
+                            </th>
+
+                            <th>
+                                Revenue
+                            </th>
+
+                            <th>
+                                Stock
+                            </th>
+
+                            <th>
+                                Performance
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- PRODUCT 1 -->
+
+                        <tr
+                            data-category="electronics"
+                            data-name="Wireless Headphones"
+                        >
+
+                            <td>
+
+                                <div class="product-name">
+
+                                    <div class="product-image">
+                                        🎧
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Wireless Headphones
+                                        </strong>
+
+                                        <span>
+                                            WH-100
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Electronics
+                            </td>
+
+
+                            <td>
+                                842
+                            </td>
+
+
+                            <td>
+                                ₹16,84,000
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock-status stock-good">
+                                    124
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="performance-tag performance-up">
+                                    ↑ 18.4%
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <tr
+                            data-category="electronics"
+                            data-name="Smart Watch"
+                        >
+
+                            <td>
+
+                                <div class="product-name">
+
+                                    <div class="product-image">
+                                        ⌚
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Smart Watch
+                                        </strong>
+
+                                        <span>
+                                            SW-200
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Electronics
+                            </td>
+
+
+                            <td>
+                                624
+                            </td>
+
+
+                            <td>
+                                ₹12,48,000
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock-status stock-medium">
+                                    42
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="performance-tag performance-up">
+                                    ↑ 14.2%
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- PRODUCT 3 -->
+
+                        <tr
+                            data-category="fashion"
+                            data-name="Running Shoes"
+                        >
+
+                            <td>
+
+                                <div class="product-name">
+
+                                    <div class="product-image">
+                                        👟
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Running Shoes
+                                        </strong>
+
+                                        <span>
+                                            RS-300
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Fashion
+                            </td>
+
+
+                            <td>
+                                518
+                            </td>
+
+
+                            <td>
+                                ₹10,36,000
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock-status stock-good">
+                                    88
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="performance-tag performance-up">
+                                    ↑ 9.8%
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- PRODUCT 4 -->
+
+                        <tr
+                            data-category="home"
+                            data-name="Coffee Maker"
+                        >
+
+                            <td>
+
+                                <div class="product-name">
+
+                                    <div class="product-image">
+                                        ☕
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Coffee Maker
+                                        </strong>
+
+                                        <span>
+                                            CM-400
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Home
+                            </td>
+
+
+                            <td>
+                                286
+                            </td>
+
+
+                            <td>
+                                ₹5,72,000
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock-status stock-low">
+                                    8
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="performance-tag performance-down">
+                                    ↓ 3.2%
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- PRODUCT 5 -->
+
+                        <tr
+                            data-category="beauty"
+                            data-name="Skin Care Kit"
+                        >
+
+                            <td>
+
+                                <div class="product-name">
+
+                                    <div class="product-image">
+                                        🧴
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Skin Care Kit
+                                        </strong>
+
+                                        <span>
+                                            SK-500
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Beauty
+                            </td>
+
+
+                            <td>
+                                392
+                            </td>
+
+
+                            <td>
+                                ₹7,84,000
+                            </td>
+
+
+                            <td>
+
+                                <span class="stock-status stock-good">
+                                    146
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="performance-tag performance-up">
+                                    ↑ 11.7%
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="../js/app.js"></script>
+
+<script src="../js/products.js"></script>
+
+
+</body>
+
+</html>

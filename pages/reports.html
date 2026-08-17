@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reports - Ecom Intelligence</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            E
+        </div>
+
+        <div>
+
+            <h2>Ecom</h2>
+
+            <span>
+                Intelligence
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN
+        </p>
+
+
+        <a href="../index.html" class="nav-link">
+
+            <span>▦</span>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="analytics.html" class="nav-link">
+
+            <span>◈</span>
+
+            Analytics
+
+        </a>
+
+
+        <a href="customers.html" class="nav-link">
+
+            <span>◉</span>
+
+            Customers
+
+        </a>
+
+
+        <a href="products.html" class="nav-link">
+
+            <span>□</span>
+
+            Products
+
+        </a>
+
+
+        <p class="nav-title">
+            INTELLIGENCE
+        </p>
+
+
+        <a href="predictions.html" class="nav-link">
+
+            <span>✦</span>
+
+            Predictions
+
+        </a>
+
+
+        <a href="reports.html" class="nav-link active">
+
+            <span>▤</span>
+
+            Reports
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+                ?
+            </div>
+
+            <div>
+
+                <strong>
+                    Need help?
+                </strong>
+
+                <p>
+                    Explore your business data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="logout-btn">
+
+            <span>
+                ↪
+            </span>
+
+            Logout
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+
+        <div class="page-heading">
+
+            <h1>
+                Business Reports
+            </h1>
+
+            <p>
+                Get a complete overview of your e-commerce performance.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+
+            <button class="icon-btn">
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Admin User
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+                <span class="profile-arrow">
+                    ⌄
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         REPORT CONTENT
+    ========================================== -->
+
+    <section class="dashboard-container">
+
+
+        <!-- REPORT TOOLBAR -->
+
+        <div class="report-toolbar">
+
+
+            <div>
+
+                <span class="live-status">
+
+                    <span></span>
+
+                    Report generated from current data
+
+                </span>
+
+            </div>
+
+
+            <div class="report-actions">
+
+                <button
+                    class="secondary-btn"
+                    id="printReportBtn"
+                >
+                    🖨 Print
+                </button>
+
+
+                <button
+                    class="primary-btn"
+                    id="downloadReportBtn"
+                >
+                    ↓ Download Report
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             BUSINESS HEALTH
+        ========================================== -->
+
+        <div class="business-health-card">
+
+
+            <div class="health-left">
+
+
+                <div class="health-score">
+
+                    <strong>
+                        86
+                    </strong>
+
+                    <span>
+                        /100
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Business Health Score
+                    </h3>
+
+                    <p>
+                        Your e-commerce business is performing well.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="health-status">
+
+                <span class="health-dot"></span>
+
+                Healthy
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             REPORT KPI
+        ========================================== -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Total Revenue
+                        </p>
+
+                        <h2>
+                            ₹48.6L
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon revenue-icon">
+                        ₹
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 14.8%
+                    </span>
+
+                    <span>
+                        vs previous period
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Total Orders
+                        </p>
+
+                        <h2>
+                            8,642
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon orders-icon">
+                        #
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 11.2%
+                    </span>
+
+                    <span>
+                        vs previous period
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Customers
+                        </p>
+
+                        <h2>
+                            3,642
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon customers-icon">
+                        👥
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 8.2%
+                    </span>
+
+                    <span>
+                        vs previous period
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Average Order Value
+                        </p>
+
+                        <h2>
+                            ₹5,624
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon conversion-icon">
+                        ↗
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 6.7%
+                    </span>
+
+                    <span>
+                        vs previous period
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             MONTHLY PERFORMANCE
+        ========================================== -->
+
+        <div class="dashboard-card report-chart-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Monthly Business Performance
+                    </h3>
+
+                    <p>
+                        Revenue and order trends
+                    </p>
+
+                </div>
+
+
+                <span class="report-period">
+                    Jan - Dec 2026
+                </span>
+
+            </div>
+
+
+            <div class="report-chart-wrapper">
+
+                <canvas id="reportPerformanceChart"></canvas>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             PERFORMANCE SUMMARY
+        ========================================== -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- REVENUE SUMMARY -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Revenue Summary
+                        </h3>
+
+                        <p>
+                            Financial performance
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-summary-list">
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            Gross Revenue
+                        </span>
+
+                        <strong>
+                            ₹52.4L
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            Discounts
+                        </span>
+
+                        <strong class="negative">
+                            -₹2.1L
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            Refunds
+                        </span>
+
+                        <strong class="negative">
+                            -₹1.7L
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item total">
+
+                        <span>
+                            Net Revenue
+                        </span>
+
+                        <strong>
+                            ₹48.6L
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CUSTOMER SUMMARY -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Customer Summary
+                        </h3>
+
+                        <p>
+                            Customer behavior
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-summary-list">
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            New Customers
+                        </span>
+
+                        <strong>
+                            1,800
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            Returning Customers
+                        </span>
+
+                        <strong>
+                            1,842
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item">
+
+                        <span>
+                            At Risk
+                        </span>
+
+                        <strong class="negative">
+                            656
+                        </strong>
+
+                    </div>
+
+
+                    <div class="report-summary-item total">
+
+                        <span>
+                            Customer Retention
+                        </span>
+
+                        <strong>
+                            72.4%
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             BUSINESS RECOMMENDATIONS
+        ========================================== -->
+
+        <div class="dashboard-card report-recommendations">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Business Recommendations
+                    </h3>
+
+                    <p>
+                        Suggested actions based on current performance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-recommendation-grid">
+
+
+                <div class="report-recommendation">
+
+                    <div class="recommendation-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Focus on Electronics
+                        </strong>
+
+                        <p>
+                            Electronics currently contributes the highest
+                            share of product revenue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="report-recommendation">
+
+                    <div class="recommendation-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Improve Customer Retention
+                        </strong>
+
+                        <p>
+                            Target at-risk customers with personalized
+                            offers and campaigns.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="report-recommendation">
+
+                    <div class="recommendation-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Monitor Inventory
+                        </strong>
+
+                        <p>
+                            Several products have low stock and may
+                            affect future sales.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="report-recommendation">
+
+                    <div class="recommendation-icon">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Use AI Forecasts
+                        </strong>
+
+                        <p>
+                            Use demand forecasts to optimize inventory
+                            and purchasing decisions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="../js/app.js"></script>
+
+<script src="../js/reports.js"></script>
+
+
+</body>
+
+</html>

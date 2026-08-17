@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers - Ecom Intelligence</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            E
+        </div>
+
+        <div>
+
+            <h2>Ecom</h2>
+
+            <span>
+                Intelligence
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN
+        </p>
+
+
+        <a href="../index.html" class="nav-link">
+
+            <span>▦</span>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="analytics.html" class="nav-link">
+
+            <span>◈</span>
+
+            Analytics
+
+        </a>
+
+
+        <a href="customers.html" class="nav-link active">
+
+            <span>◉</span>
+
+            Customers
+
+        </a>
+
+
+        <a href="products.html" class="nav-link">
+
+            <span>□</span>
+
+            Products
+
+        </a>
+
+
+        <p class="nav-title">
+            INTELLIGENCE
+        </p>
+
+
+        <a href="predictions.html" class="nav-link">
+
+            <span>✦</span>
+
+            Predictions
+
+        </a>
+
+
+        <a href="reports.html" class="nav-link">
+
+            <span>▤</span>
+
+            Reports
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+                ?
+            </div>
+
+            <div>
+
+                <strong>
+                    Need help?
+                </strong>
+
+                <p>
+                    Explore your business data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="logout-btn">
+
+            <span>
+                ↪
+            </span>
+
+            Logout
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+
+        <div class="page-heading">
+
+            <h1>
+                Customer Intelligence
+            </h1>
+
+            <p>
+                Understand your customers and their behavior.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+
+            <button class="icon-btn">
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="profile">
+
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong>
+                        Admin User
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+
+                <span class="profile-arrow">
+                    ⌄
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         CUSTOMER CONTENT
+    ========================================== -->
+
+    <section class="dashboard-container">
+
+
+        <!-- TOOLBAR -->
+
+        <div class="dashboard-toolbar">
+
+
+            <div>
+
+                <span class="live-status">
+
+                    <span></span>
+
+                    Customer data updated recently
+
+                </span>
+
+            </div>
+
+
+            <div class="toolbar-actions">
+
+                <button class="primary-btn">
+                    + Add Customer
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             CUSTOMER KPI CARDS
+        ========================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- TOTAL CUSTOMERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Total Customers
+                        </p>
+
+                        <h2>
+                            3,642
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon customers-icon">
+                        👥
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 8.2%
+                    </span>
+
+                    <span>
+                        vs last month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NEW CUSTOMERS -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            New Customers
+                        </p>
+
+                        <h2>
+                            1,800
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon conversion-icon">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 14.6%
+                    </span>
+
+                    <span>
+                        this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RETURNING -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Returning Customers
+                        </p>
+
+                        <h2>
+                            1,842
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon revenue-icon">
+                        ↻
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 9.4%
+                    </span>
+
+                    <span>
+                        this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHURN -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Churn Risk
+                        </p>
+
+                        <h2>
+                            218
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon orders-icon">
+                        ⚠
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="negative">
+                        ↑ 4.2%
+                    </span>
+
+                    <span>
+                        needs attention
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             SEGMENTATION + RFM
+        ========================================== -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- CUSTOMER SEGMENTATION -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Customer Segmentation
+                        </h3>
+
+                        <p>
+                            Distribution of your customers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-chart-wrapper">
+
+                    <canvas id="customerSegmentChart"></canvas>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RFM -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            RFM Customer Analysis
+                        </h3>
+
+                        <p>
+                            Recency, Frequency and Monetary value
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="rfm-container">
+
+
+                    <!-- RECENCY -->
+
+                    <div class="rfm-item">
+
+                        <div class="rfm-icon">
+                            R
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Recency
+                            </strong>
+
+                            <span>
+                                How recently customers purchased
+                            </span>
+
+                        </div>
+
+                        <b>
+                            78%
+                        </b>
+
+                    </div>
+
+
+                    <!-- FREQUENCY -->
+
+                    <div class="rfm-item">
+
+                        <div class="rfm-icon">
+                            F
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Frequency
+                            </strong>
+
+                            <span>
+                                How often customers purchase
+                            </span>
+
+                        </div>
+
+                        <b>
+                            64%
+                        </b>
+
+                    </div>
+
+
+                    <!-- MONETARY -->
+
+                    <div class="rfm-item">
+
+                        <div class="rfm-icon">
+                            M
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Monetary
+                            </strong>
+
+                            <span>
+                                How much customers spend
+                            </span>
+
+                        </div>
+
+                        <b>
+                            82%
+                        </b>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="rfm-score">
+
+                    <span>
+                        Overall Customer Value
+                    </span>
+
+                    <strong>
+                        74.6 / 100
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             SEGMENT CARDS
+        ========================================== -->
+
+        <div class="dashboard-card segment-card-container">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Customer Segments
+                    </h3>
+
+                    <p>
+                        Understand different customer groups
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="segment-grid">
+
+
+                <!-- CHAMPIONS -->
+
+                <div class="segment-card champions-card">
+
+                    <div class="segment-icon">
+                        🏆
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Champions
+                        </strong>
+
+                        <span>
+                            874 customers
+                        </span>
+
+                    </div>
+
+                    <b>
+                        24%
+                    </b>
+
+                </div>
+
+
+
+                <!-- LOYAL -->
+
+                <div class="segment-card loyal-card">
+
+                    <div class="segment-icon">
+                        💙
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Loyal
+                        </strong>
+
+                        <span>
+                            1,129 customers
+                        </span>
+
+                    </div>
+
+                    <b>
+                        31%
+                    </b>
+
+                </div>
+
+
+
+                <!-- NEW -->
+
+                <div class="segment-card new-card">
+
+                    <div class="segment-icon">
+                        ✨
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            New Customers
+                        </strong>
+
+                        <span>
+                            546 customers
+                        </span>
+
+                    </div>
+
+                    <b>
+                        15%
+                    </b>
+
+                </div>
+
+
+
+                <!-- AT RISK -->
+
+                <div class="segment-card risk-card">
+
+                    <div class="segment-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            At Risk
+                        </strong>
+
+                        <span>
+                            656 customers
+                        </span>
+
+                    </div>
+
+                    <b>
+                        18%
+                    </b>
+
+                </div>
+
+
+
+                <!-- CHURN -->
+
+                <div class="segment-card churn-card">
+
+                    <div class="segment-icon">
+                        🚨
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Churn Risk
+                        </strong>
+
+                        <span>
+                            437 customers
+                        </span>
+
+                    </div>
+
+                    <b>
+                        12%
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             CUSTOMER TABLE
+        ========================================== -->
+
+        <div class="dashboard-card customer-table-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <h3>
+                        Customer Overview
+                    </h3>
+
+                    <p>
+                        Customer-level intelligence
+                    </p>
+
+                </div>
+
+
+                <div class="customer-filters">
+
+                    <input
+                        type="text"
+                        id="customerSearch"
+                        placeholder="Search customer..."
+                    >
+
+
+                    <select id="segmentFilter">
+
+                        <option value="all">
+                            All Segments
+                        </option>
+
+                        <option value="champions">
+                            Champions
+                        </option>
+
+                        <option value="loyal">
+                            Loyal
+                        </option>
+
+                        <option value="new">
+                            New
+                        </option>
+
+                        <option value="risk">
+                            At Risk
+                        </option>
+
+                        <option value="churn">
+                            Churn Risk
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="table-container">
+
+
+                <table id="customerTable">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Orders
+                            </th>
+
+                            <th>
+                                Total Spent
+                            </th>
+
+                            <th>
+                                Last Purchase
+                            </th>
+
+                            <th>
+                                Segment
+                            </th>
+
+                            <th>
+                                Risk
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr
+                            data-segment="champions"
+                            data-name="Rahul Sharma"
+                        >
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Sharma
+                                        </strong>
+
+                                        <span>
+                                            rahul@example.com
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                24
+                            </td>
+
+
+                            <td>
+                                ₹84,500
+                            </td>
+
+
+                            <td>
+                                2 days ago
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-tag champion-tag">
+                                    Champion
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="risk-status low-risk">
+                                    Low
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-segment="loyal"
+                            data-name="Priya Patel"
+                        >
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        PP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Patel
+                                        </strong>
+
+                                        <span>
+                                            priya@example.com
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                18
+                            </td>
+
+
+                            <td>
+                                ₹56,200
+                            </td>
+
+
+                            <td>
+                                5 days ago
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-tag loyal-tag">
+                                    Loyal
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="risk-status low-risk">
+                                    Low
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-segment="risk"
+                            data-name="Amit Shah"
+                        >
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        AS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Amit Shah
+                                        </strong>
+
+                                        <span>
+                                            amit@example.com
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                11
+                            </td>
+
+
+                            <td>
+                                ₹28,700
+                            </td>
+
+
+                            <td>
+                                42 days ago
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-tag risk-tag">
+                                    At Risk
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="risk-status medium-risk">
+                                    Medium
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-segment="new"
+                            data-name="Neha Mehta"
+                        >
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        NM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Neha Mehta
+                                        </strong>
+
+                                        <span>
+                                            neha@example.com
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                3
+                            </td>
+
+
+                            <td>
+                                ₹7,850
+                            </td>
+
+
+                            <td>
+                                4 days ago
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-tag new-tag">
+                                    New
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="risk-status low-risk">
+                                    Low
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr
+                            data-segment="churn"
+                            data-name="Vikas Patel"
+                        >
+
+                            <td>
+
+                                <div class="customer-name">
+
+                                    <div class="customer-avatar">
+                                        VP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikas Patel
+                                        </strong>
+
+                                        <span>
+                                            vikas@example.com
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                7
+                            </td>
+
+
+                            <td>
+                                ₹19,400
+                            </td>
+
+
+                            <td>
+                                94 days ago
+                            </td>
+
+
+                            <td>
+
+                                <span class="customer-tag churn-tag">
+                                    Churn Risk
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="risk-status high-risk">
+                                    High
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/customers.js"></script>
+
+
+</body>
+
+</html>

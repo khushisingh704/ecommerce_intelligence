@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Predictions - Ecom Intelligence</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            E
+        </div>
+
+        <div>
+
+            <h2>Ecom</h2>
+
+            <span>
+                Intelligence
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <p class="nav-title">
+            MAIN
+        </p>
+
+
+        <a href="../index.html" class="nav-link">
+
+            <span>▦</span>
+
+            Dashboard
+
+        </a>
+
+
+        <a href="analytics.html" class="nav-link">
+
+            <span>◈</span>
+
+            Analytics
+
+        </a>
+
+
+        <a href="customers.html" class="nav-link">
+
+            <span>◉</span>
+
+            Customers
+
+        </a>
+
+
+        <a href="products.html" class="nav-link">
+
+            <span>□</span>
+
+            Products
+
+        </a>
+
+
+        <p class="nav-title">
+            INTELLIGENCE
+        </p>
+
+
+        <a href="predictions.html" class="nav-link active">
+
+            <span>✦</span>
+
+            Predictions
+
+        </a>
+
+
+        <a href="reports.html" class="nav-link">
+
+            <span>▤</span>
+
+            Reports
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+                ?
+            </div>
+
+            <div>
+
+                <strong>
+                    Need help?
+                </strong>
+
+                <p>
+                    Explore your business data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="logout-btn">
+
+            <span>
+                ↪
+            </span>
+
+            Logout
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+
+        <div class="page-heading">
+
+            <h1>
+                AI Predictions
+            </h1>
+
+            <p>
+                Predict future trends and discover business opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+
+            <button class="icon-btn">
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Admin User
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+                <span class="profile-arrow">
+                    ⌄
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         PREDICTION CONTENT
+    ========================================== -->
+
+    <section class="dashboard-container">
+
+
+        <!-- AI STATUS -->
+
+        <div class="ai-status-card">
+
+
+            <div class="ai-status-icon">
+                ✦
+            </div>
+
+
+            <div>
+
+                <strong>
+                    AI Intelligence Engine
+                </strong>
+
+                <p>
+                    Prediction models are analyzing your e-commerce data.
+                </p>
+
+            </div>
+
+
+            <span class="ai-active">
+
+                <span></span>
+
+                Model Active
+
+            </span>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             PREDICTION KPI
+        ========================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- SALES FORECAST -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Next Month Sales
+                        </p>
+
+                        <h2>
+                            ₹8.42L
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon revenue-icon">
+                        ↗
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 12.8%
+                    </span>
+
+                    <span>
+                        predicted
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHURN -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Churn Probability
+                        </p>
+
+                        <h2>
+                            8.4%
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon orders-icon">
+                        ⚠
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↓ 2.1%
+                    </span>
+
+                    <span>
+                        expected
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEMAND -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Demand Growth
+                        </p>
+
+                        <h2>
+                            16.7%
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon conversion-icon">
+                        ↑
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 4.3%
+                    </span>
+
+                    <span>
+                        forecast
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLV -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div>
+
+                        <p>
+                            Predicted CLV
+                        </p>
+
+                        <h2>
+                            ₹18,240
+                        </h2>
+
+                    </div>
+
+
+                    <div class="stat-icon customers-icon">
+                        ₹
+                    </div>
+
+                </div>
+
+
+                <div class="stat-bottom">
+
+                    <span class="positive">
+                        ↑ 9.6%
+                    </span>
+
+                    <span>
+                        per customer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             SALES FORECAST
+        ========================================== -->
+
+        <div class="dashboard-card prediction-chart-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Sales Forecast
+                    </h3>
+
+                    <p>
+                        Historical sales compared with predicted sales
+                    </p>
+
+                </div>
+
+
+                <span class="prediction-badge">
+                    AI Forecast
+                </span>
+
+            </div>
+
+
+            <div class="prediction-chart-wrapper">
+
+                <canvas id="salesForecastChart"></canvas>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             AI INSIGHTS
+        ========================================== -->
+
+        <div class="analytics-insights">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        AI Business Insights
+                    </h3>
+
+                    <p>
+                        Recommendations generated from your data
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-insight-grid">
+
+
+                <!-- INSIGHT 1 -->
+
+                <div class="analytics-insight">
+
+
+                    <div class="analytics-insight-icon">
+                        📈
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Sales Opportunity
+                        </strong>
+
+                        <p>
+                            Electronics demand is expected to increase
+                            over the next 30 days.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- INSIGHT 2 -->
+
+                <div class="analytics-insight">
+
+
+                    <div class="analytics-insight-icon">
+                        ⚠️
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Churn Alert
+                        </strong>
+
+                        <p>
+                            218 customers show behavioral patterns
+                            associated with potential churn.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- INSIGHT 3 -->
+
+                <div class="analytics-insight">
+
+
+                    <div class="analytics-insight-icon">
+                        📦
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Inventory Alert
+                        </strong>
+
+                        <p>
+                            Coffee Maker inventory may become critical
+                            within the next two weeks.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             PREDICTION MODELS
+        ========================================== -->
+
+        <div class="dashboard-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Prediction Models
+                    </h3>
+
+                    <p>
+                        Machine learning models used by the intelligence engine
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-grid">
+
+
+                <!-- SALES -->
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Sales Forecasting
+                        </strong>
+
+                        <span>
+                            Time Series Model
+                        </span>
+
+                    </div>
+
+                    <b>
+                        91.4%
+                    </b>
+
+                </div>
+
+
+
+                <!-- CHURN -->
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Customer Churn
+                        </strong>
+
+                        <span>
+                            Classification Model
+                        </span>
+
+                    </div>
+
+                    <b>
+                        87.6%
+                    </b>
+
+                </div>
+
+
+
+                <!-- DEMAND -->
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Demand Prediction
+                        </strong>
+
+                        <span>
+                            Regression Model
+                        </span>
+
+                    </div>
+
+                    <b>
+                        89.2%
+                    </b>
+
+                </div>
+
+
+
+                <!-- CLV -->
+
+                <div class="model-card">
+
+                    <div class="model-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Customer Lifetime Value
+                        </strong>
+
+                        <span>
+                            Regression Model
+                        </span>
+
+                    </div>
+
+                    <b>
+                        85.8%
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             RECOMMENDED ACTIONS
+        ========================================== -->
+
+        <div class="dashboard-card recommended-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Recommended Actions
+                    </h3>
+
+                    <p>
+                        What your business should do next
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-list">
+
+
+                <div class="recommendation-item">
+
+                    <div class="recommendation-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Increase Electronics Inventory
+                        </strong>
+
+                        <p>
+                            Predicted demand is 16.7% higher next month.
+                        </p>
+
+                    </div>
+
+                    <button>
+                        Review
+                    </button>
+
+                </div>
+
+
+
+                <div class="recommendation-item">
+
+                    <div class="recommendation-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Target At-Risk Customers
+                        </strong>
+
+                        <p>
+                            Launch a personalized campaign for 218 high-risk customers.
+                        </p>
+
+                    </div>
+
+                    <button>
+                        Review
+                    </button>
+
+                </div>
+
+
+
+                <div class="recommendation-item">
+
+                    <div class="recommendation-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Restock Coffee Makers
+                        </strong>
+
+                        <p>
+                            Current inventory may not cover predicted demand.
+                        </p>
+
+                    </div>
+
+                    <button>
+                        Review
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<script src="../js/app.js"></script>
+
+<script src="../js/predictions.js"></script>
+
+
+</body>
+
+</html>
